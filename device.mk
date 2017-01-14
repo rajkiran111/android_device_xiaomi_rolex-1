@@ -152,6 +152,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# Libshims
+PRODUCT_PACKAGES += \
+    libshims_ims
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8937 \
@@ -191,11 +195,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lights.msm8937
 
-# Media 
+# Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml 
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \

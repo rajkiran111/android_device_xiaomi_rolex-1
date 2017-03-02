@@ -241,7 +241,6 @@ PRODUCT_PACKAGES += \
     init.qcom.efs.sync.sh \
     init.qcom.sdio.sh \
     init.qcom.wifi.sh \
-    init.qcom.fm.sh \
     init.qcom.post_boot.sh \
     init.qcom.power.rc
 

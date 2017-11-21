@@ -38,15 +38,21 @@
          backlight values for LUX levels between these control points.
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>1</item>
-        <item>8</item>
-        <item>40</item>
-        <item>350</item>
-        <item>600</item>
-        <item>1000</item>
-        <item>1600</item>
+    	<item>1</item>
+        <item>10</item>
+        <item>30</item>
+        <item>80</item>
+        <item>120</item>
+        <item>225</item>
+        <item>320</item>
+        <item>550</item>
+        <item>880</item>
+        <item>1250</item>
+        <item>2000</item>
         <item>3000</item>
-	<item>10000</item>
+        <item>5000</item>
+        <item>5500</item>
+        <item>7500</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -55,26 +61,41 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>13</item>   <!-- 0-1 -->
-        <item>26</item>   <!-- 1-8 -->
-        <item>55</item>   <!-- 8-40 -->
-        <item>88</item>   <!-- 40-350 -->
-        <item>130</item>  <!-- 350-600 -->
-        <item>167</item>  <!-- 600-1000 -->
-        <item>204</item>  <!-- 1000-1600 -->
-        <item>240</item>  <!-- 1600-3000 -->
-        <item>254</item>  <!-- 3000-10000 -->
-	<item>255</item> <!-- 10000+ -->
+        <item>11</item>
+        <item>18</item>
+        <item>29</item>
+        <item>34</item>
+        <item>46</item>
+        <item>54</item>
+        <item>69</item>
+        <item>81</item>
+        <item>100</item>
+        <item>123</item>
+        <item>148</item>
+        <item>187</item>
+        <item>196</item>
+        <item>225</item>
+        <item>255</item>
     </integer-array>
 
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDim">10</integer>
+    <integer name="config_screenBrightnessDim">1</integer>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">1</integer>
+
+    <integer name="config_buttonBrightnessSettingDefault">0</integer>
+
+    <!-- Maximum screen brightness allowed by the power manager.
+         The user is forbidden from setting the brightness above this level. -->
+    <integer name="config_screenBrightnessSettingMaximum">255</integer>
+
+    <!-- Default screen brightness setting.
+         Must be in the range specified by minimum and maximum. -->
+    <integer name="config_screenBrightnessSettingDefault">69</integer>
 
     <!-- Default LED on time for notification LED in milliseconds. -->
     <integer name="config_defaultNotificationLedOn">500</integer>
@@ -136,7 +157,7 @@
          This needs to match the constants in
          policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
     -->
-    <integer name="config_longPressOnHomeBehavior">2</integer>
+    <integer name="config_longPressOnHomeBehavior">3</integer>
 
     <!-- Control the behavior when the user long presses the menu button.
             0 - Nothing
@@ -148,7 +169,7 @@
          This needs to match the constants in
          policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
     -->
-    <integer name="config_longPressOnMenuBehavior">3</integer>
+    <integer name="config_longPressOnMenuBehavior">2</integer>
 
     <!-- Control the behavior when the user double-taps the home button.
             0 - Nothing

@@ -538,6 +538,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 service rmt_storage /system/bin/rmt_storage
     class core
     user root
+    group wakelock
 
 service tftp_server /system/bin/tftp_server
    class core
@@ -590,7 +591,8 @@ service qmuxd /system/bin/qmuxd
 
 service netmgrd /system/bin/netmgrd
     class main
-    writepid /dev/cpuset/system-background/tasks
+    user root
+    group radio readproc system wakelock
 
 service qti /system/vendor/bin/qti
     class main

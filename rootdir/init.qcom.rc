@@ -113,9 +113,6 @@ on post-fs-data
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
-    # bond0 used by FST Manager
-    chown wifi wifi /sys/class/net/bond0/bonding/queue_id
-
     setprop wifi.interface wlan0
     
     setprop persist.radio.start_ota_daemon 1

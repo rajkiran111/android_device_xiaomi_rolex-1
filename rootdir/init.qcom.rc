@@ -458,14 +458,6 @@ service qcomsysd /system/bin/qcom-system-daemon
     user root
     group root qcom_diag
 
-on property:persist.sys.ssr.enable_ramdumps=1
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
-    mkdir /data/ramdump 770 system system
-    start ss_ramdump
-
-on property:persist.sys.ssr.enable_ramdumps=0
-write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
-
 service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
     class late_start
     user root

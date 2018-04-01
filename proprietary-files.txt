@@ -1884,7 +1884,6 @@ bin/cnss_diag
 etc/firmware/wlan/prima/WCNSS_cfg.dat
 bin/wcnss_service
 bin/fstman
-lib/modules/pronto/pronto_wlan.ko:lib/modules/wlan.ko
 
 # To-Do
 vendor/lib/libaudioparsers.so

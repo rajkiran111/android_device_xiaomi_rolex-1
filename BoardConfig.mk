@@ -43,10 +43,8 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_KERNEL_CONFIG := rolex_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
-BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/prebuilt/mkbootimg.mk
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+TARGET_KERNEL_CONFIG := lineageos_rolex_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8917
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -230,8 +228,6 @@ BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
 WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
-WIFI_DRIVER_MODULE_NAME := "wlan"
-WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version

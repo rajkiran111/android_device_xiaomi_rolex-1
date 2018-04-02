@@ -640,6 +640,11 @@ service btwlancoex /system/bin/sh /init.qcom.coex.sh
     disabled
     oneshot
 
+service baseband-sh /system/bin/sh /init.baseband.sh
+    class late_start
+    user root
+    oneshot
+
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
     #Reset read ahead for dm-0 and dm-1 to 512kb

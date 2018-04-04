@@ -116,7 +116,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8953 \
+    camera.msm8937 \
     libmm-qcamera \
     Snap
 

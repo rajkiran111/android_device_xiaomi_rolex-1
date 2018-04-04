@@ -117,7 +117,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8937 \
-    libshims_camera \
+    libshim_camera \
     Snap
 
 # Display

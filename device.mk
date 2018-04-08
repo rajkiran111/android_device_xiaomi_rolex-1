@@ -135,10 +135,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjni_livedisplay
 
-# Doze mode
-PRODUCT_PACKAGES += \
-    XiaomiDoze
-
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \

@@ -144,10 +144,11 @@ service imsstarter /system/bin/sh /system/etc/init.qti.ims.sh
     class main
     oneshot
 
-service baseband-sh /system/bin/sh /init.baseband.sh
+service baseband-sh /system/bin/sh /system/etc/init.baseband.sh
     class late_start
     user root
     oneshot
+    disabled
 
 on property:vold.decrypt=trigger_restart_framework
     start imsstarter
@@ -447,3 +448,6 @@ service mlipayservice /system/bin/mlipayd
     chown system system /dev/cpuset/camera-daemon
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
+
+on property:gsm.version.baseband=""
+    start baseband-sh

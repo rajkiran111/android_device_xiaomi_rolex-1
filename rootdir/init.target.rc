@@ -144,6 +144,11 @@ service imsstarter /system/bin/sh /system/etc/init.qti.ims.sh
     class main
     oneshot
 
+service baseband-sh /system/bin/sh /init.baseband.sh
+    class late_start
+    user root
+    oneshot
+
 on property:vold.decrypt=trigger_restart_framework
     start imsstarter
 

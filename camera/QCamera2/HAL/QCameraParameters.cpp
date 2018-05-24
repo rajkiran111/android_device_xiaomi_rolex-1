@@ -5497,7 +5497,7 @@ int32_t QCameraParameters::initDefaultParameters()
        m_pCapability->raw_dim[0].width, m_pCapability->raw_dim[0].height);
 
     //set default jpeg quality and thumbnail quality
-    set(KEY_JPEG_QUALITY, 96);
+    set(KEY_JPEG_QUALITY, 85);
     set(KEY_JPEG_THUMBNAIL_QUALITY, 85);
 
     // Set FPS ranges
@@ -6588,8 +6588,6 @@ int32_t QCameraParameters::setPreviewFpsRange(int min_fps,
              vid_min_fps = vid_max_fps = fixedFpsValue*1000;
         }
     }
-    min_fps=7000;
-    vid_min_fps=7000;
     snprintf(str, sizeof(str), "%d,%d", min_fps, max_fps);
     LOGH("Setting preview fps range %s", str);
     updateParamEntry(KEY_PREVIEW_FPS_RANGE, str);
@@ -10889,7 +10887,7 @@ uint32_t QCameraParameters::getJpegQuality()
 {
     int quality = getInt(KEY_JPEG_QUALITY);
     if (quality < 0) {
-        quality = 96; // set to default quality value
+        quality = 85; // set to default quality value
     }
     return (uint32_t)quality;
 }

@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_rolex.mk
+    $(LOCAL_DIR)/toxyc.mk

@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Aex stuff
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/toxyc/config/common_full_phone.mk)
 
 # Inherit from rolex device
 $(call inherit-product, device/xiaomi/rolex/device.mk)
@@ -32,7 +32,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := rolex
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi 4A
-PRODUCT_NAME := aosp_rolex
+PRODUCT_NAME := toxyc_rolex
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -45,3 +45,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "Xiaomi/rolex/rolex:7.1.2/N2G47H/V9.2.6.0.NCCMIEK:user/release-keys"
+
+#export
+TOXYC_BUILD_TYPE=OFFICIAL

@@ -19,4 +19,7 @@
 
     <!-- Whether to enable channel 50 settings (Brazil) -->
     <bool name="show_brazil_settings">true</bool>
+    <bool name="call_recording_enabled">true</bool>
+
+<integer name="call_recording_audio_source">4</integer>
 </resources>
